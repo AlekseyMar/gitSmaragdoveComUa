@@ -1,0 +1,1458 @@
+/*
+Theme Name: Stp Accessibility
+Author: Joseph LoPreste
+Author URI: https://www.stpetedesign.com
+Description: This is a base accessibility template
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Theme URI: https://www.stpetedesign.com/accessible-theme/
+Version: 1.1.6
+Tested up to: 5.4.1
+Requires PHP: 7.0
+Tags: accessibility-ready, two-columns, custom-logo, custom-menu, featured-images
+Text Domain: stp-accessibility
+*/
+
+@font-face {
+	font-family: 'Lasco';
+	src: url('font/Lasco.ttf') format('truetype');
+	font-family: 'Pacifico';
+	src: url('font/Pacifico.ttf') format('truetype');
+}
+
+body{
+  background-color: #f0f0f0 !important;
+}
+
+h1,h2,h3,h4,h5,h6, .h1,.h2,.h3,.h4,.h5,.h6{
+  color: #073bb1;
+} 
+
+a{
+  color: #0059B8;
+  text-decoration: underline;
+}
+
+.site-title a{
+  color:#004794;
+  text-decoration: none;
+}
+
+a:hover, .site-title a:hover, a:focus, .site-title a:focus{
+  color:#BF1722;
+  text-decoration: none;
+}
+
+.btn-primary{
+  background-color: #000000;
+}
+
+input[type="submit"], button{
+  background-color: #000000;
+  border:0px;
+  padding:10px 30px;
+  border-radius:2px;
+  color:#fff;
+}
+
+input[type="submit"]:hover, button:hover{
+background: linear-gradient(#295Ccc,#1CB8cc);
+color:#fff;
+}
+
+input[type="submit"]:focus, button:focus{
+box-shadow: 0 0 0 0.2rem rgba(38,143,255,.5);
+}
+
+#content img{
+  max-width:100%;
+}
+
+/** comment */
+#comments ol{
+  list-style:none;
+}
+
+#comments .comment{
+  padding:10px;
+  border:1px solid #ccc;
+  margin-bottom:10px;
+}
+/** end */
+
+/** skip link**/
+.skip-link {
+  position: fixed !important;
+  z-index: 200000;
+  top: 2px;
+  left: 2px;
+  opacity: 0;
+  transition: all .4s;
+}
+
+.skip-link:focus{
+  opacity: 1;
+}
+/* end */
+
+.primary-menu{
+	
+}
+
+/** Header */
+#pi-navigation{
+	background-size: auto 100%;
+	border-top: 1px solid #111111; 
+	border-bottom: 1px solid #111111; 
+}
+
+.is-sticky__item{
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(180deg, rgba(55,135,39,1), rgba(44,187,77,1));
+}
+
+.sticky-element-active .is-sticky__item{
+	background: linear-gradient(180deg, rgba(71,138,33,.7), rgba(40,167,41,.5));
+}
+
+.custom-logo{
+  max-width:100%;
+  height:auto;
+}
+/* End header */
+
+/** Menu */
+#pi-navigation .navbar-nav li{
+  list-style:none;
+  position:relative;
+}
+
+#pi-navigation .navbar-nav{
+  display:flex;
+}
+
+#pi-navigation .navbar-nav > li > a{
+  color:#fff;
+  
+  padding:1.4rem 1.6rem;
+  font-weight:bold;
+}
+
+#pi-navigation .navbar-nav > li > a:hover, #pi-navigation .navbar-nav > li.current-menu-item > a{
+  background-color:rgba(0, 0, 0, 0.1);
+	text-decoration: none;
+}
+
+.pi-close{
+  color:#fff;
+  font-size:32px;
+}
+
+#pi-navigation .navbar-nav > li >  ul{
+  position:absolute;
+  transition:opacity 200ms linear;
+  margin-top:10px;
+  padding-top:4px;
+  padding-bottom:4px;
+   position:absolute;
+  background-color:#065465;
+  padding-left:0px ;
+  opacity: 0;
+    left: -9999px;
+    z-index: 99999;
+  min-width: 200px;
+}
+
+#pi-navigation .navbar-nav > li >  ul:before{
+  content:"";
+  position:absolute;
+  top:-10px;
+  left:20px;
+  font-size:12px;
+  color:#065465;
+  
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #065465 transparent;
+}
+
+#pi-navigation .navbar-nav > li:hover >  ul,#pi-navigation .navbar-nav > li.is-focused >  ul, #pi-navigation .navbar-nav > li > a:focus+ul{
+  display:block;
+  opacity:1;
+  left: 0;
+    right: auto;
+    top: auto;
+    bottom: auto;
+ 
+  /* width: 200px; */
+}
+
+#pi-navigation .navbar-nav > li >  ul > li > a{
+  display:block;
+  padding:0.4rem 1rem;
+  color:#fff;
+  text-align: left;
+  text-decoration:none;
+  transition:all 0.2s;
+  font-size:14px;
+}
+
+#pi-navigation .navbar-nav > li >  ul > li{
+  padding:0 4px
+}
+
+#pi-navigation .navbar-nav > li >  ul > li > a:hover{
+  /*background-color:rgba(0, 0, 0, 0.1);*/
+	background: linear-gradient(#99BB22,#1CB800);
+	text-decoration: none;
+}
+
+
+/** End */
+
+/** Main */
+.pi-box{
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+/** End */
+
+/** Widget */
+.widget-content ul{
+  padding-left:20px;
+}
+/** End */
+
+/** Footer */
+#pi-footer{
+  background-color:#ffffff;
+  /* border-top:1px solid #000000; */
+}
+
+/** End footer */
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float:right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+border: 0;
+clip: rect(1px, 1px, 1px, 1px);
+clip-path: inset(50%);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute !important;
+width: 1px;
+word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+background-color: #eee;
+clip: auto !important;
+clip-path: none;
+color: #444;
+display: block;
+font-size: 1em;
+height: auto;
+left: 5px;
+line-height: normal;
+padding: 15px 23px 14px;
+text-decoration: none;
+top: 5px;
+width: auto;
+z-index: 100000;
+/* Above WP toolbar. */
+}
+
+/* == WordPress WYSIWYG Editor Styles == */
+
+.entry-content img {
+	margin: 0 0 1.5em 0;
+	}
+.alignleft, img.alignleft {
+	margin-right: 1.5em;
+	display: inline;
+	float: left;
+	}
+.alignright, img.alignright {
+	margin-left: 1.5em;
+	display: inline;
+	float: right;
+	}
+.aligncenter, img.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+	}
+.alignnone, img.alignnone {
+	/* not sure about this one */
+	}
+.wp-caption {
+	margin-bottom: 1.5em;
+	text-align: center;
+	padding-top: 5px;
+	}
+.wp-caption img {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	}
+.wp-caption p.wp-caption-text {
+	line-height: 1.5;
+	font-size: 10px;
+	margin: 0;
+	}
+.wp-smiley {
+	margin: 0 !important;
+	max-height: 1em;
+	}
+blockquote.left {
+	margin-right: 20px;
+	text-align: right;
+	margin-left: 0;
+	width: 33%;
+	float: left;
+	}
+blockquote.right {
+	margin-left: 20px;
+	text-align: left;
+	margin-right: 0;
+	width: 33%;
+	float: right;
+}
+
+.gallery dl {}
+.gallery dt {}
+.gallery dd {}
+.gallery dl a {}
+.gallery dl img {}
+.gallery-caption {}
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+/* == WP CSS - Comment Styles == */
+
+.commentlist .reply {}
+.commentlist .reply a {}
+
+.commentlist .alt {}
+.commentlist .odd {}
+.commentlist .even {}
+.commentlist .thread-alt {}
+.commentlist .thread-odd {}
+.commentlist .thread-even {}
+.commentlist li ul.children .alt {}
+.commentlist li ul.children .odd {}
+.commentlist li ul.children .even {}
+
+.commentlist .vcard {}
+.commentlist .vcard cite.fn {}
+.commentlist .vcard span.says {}
+.commentlist .vcard img.photo {}
+.commentlist .vcard img.avatar {}
+.commentlist .vcard cite.fn a.url {}
+
+.commentlist .comment-meta {} 
+.commentlist .comment-meta a {}
+.commentlist .commentmetadata {}
+.commentlist .commentmetadata a {}
+
+.commentlist .parent {}
+.commentlist .comment {}
+.commentlist .children {}
+.commentlist .pingback {}
+.commentlist .bypostauthor {}
+.commentlist .comment-author {}
+.commentlist .comment-author-admin {}
+
+.commentlist {}
+.commentlist li {}
+.commentlist li p {}
+.commentlist li ul {}
+.commentlist li ul.children li {}
+.commentlist li ul.children li.alt {}
+.commentlist li ul.children li.byuser {}
+.commentlist li ul.children li.comment {}
+.commentlist li ul.children li.depth {}
+.commentlist li ul.children li.bypostauthor {}
+.commentlist li ul.children li.comment-author-admin {}
+
+#cancel-comment-reply {}
+#cancel-comment-reply a {}
+
+.nav-links{
+	display:flex;
+	justify-content:space-between;
+}
+
+.nav-links .page-numbers{
+	margin-right:10px;
+}
+
+.nav-links .nav-previous, .nav-links .nav-next{
+  text-align: center;
+}
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Mobile navigation */
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+
+.site-navigation {
+	display: block;
+	margin: 0;
+}
+
+/* Styling the links */
+.site-navigation a {
+	display: block;
+	font-size: 1.125rem;
+	padding: 1.25em 0.75em;
+	color: #fff;
+	text-decoration: none;
+	box-sizing: border-box;
+	width: 100%;
+	white-space: normal;
+}
+.sub-menu li{
+	position: relative;
+	border-bottom: 1px dashed #ffffff;
+	width: 100%;
+}
+
+.sub-menu li{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sub-menu li a{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* Background color при наведении выпад список меню и эл меню */
+.site-navigation .menu a:hover,
+.site-navigation .menu a:focus { 
+	background: linear-gradient(180deg, rgba(71,138,33,.7), rgba(40,167,41,0.5));
+	color: #EF5925;
+	outline: 1px solid #111;
+	text-decoration: none;
+	/*border: 2px solid #FFA629;
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 0px 0px 1px #FAFAFA; 
+	box-shadow: 0px 0px 0px 1px #FAFAFA;*/
+
+}
+
+/* Set menu item's width to 100% */
+.site-navigation .menu li {
+	display: block;
+	width: 100%;
+	/* border-top: 1px solid #bbb; */
+}
+
+/* эл-ты в выпадающем списке меню */
+.site-navigation .menu li ul li:hover,
+.site-navigation .menu li ul li:focus {
+	background: linear-gradient(180deg, rgba(71,138,33,1), rgba(40,167,41,1));
+	text-decoration: none;
+}
+
+/* Styling the toggle buttons */
+.menu-toggle {
+	background: linear-gradient(180deg, rgba(71,138,33,1), rgba(40,167,41,1));
+	padding: 0.75em 0.625em 0.625em 0.75em;
+	color: #fff;
+	font-size: 1.125em;
+	text-decoration: none;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	display: block;
+	/* position: absolute; */
+	top: 1em;
+	right: 1em;
+	width: 100%;
+}
+
+.menu-toggle .dashicons {
+	vertical-align: text-bottom;
+}
+
+.menu-toggle .dashicons:before {
+	content: '\f228';
+}
+
+.toggled .menu-toggle {
+	background: linear-gradient(180deg, rgba(71,138,33,.7), rgba(40,167,41,0.5));
+}
+
+.toggled .menu-toggle .dashicons:before {
+	content: '\f158';
+}
+
+.dropdown-toggle {
+	/*background-color: transparent;*/
+	background: linear-gradient(180deg, rgba(71,138,33,1), rgba(40,167,41,1));
+	padding: 1.1em;
+	position: absolute;
+	top: 0.4em;
+	right: 0.5em;
+	border: 1px solid transparent;
+	border-left: 1px solid #bbb;
+	border-radius: 0;
+	color: #fff;
+	text-align: center;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	border: 1px dashed #ffffff;
+	text-decoration: none;
+}
+
+.dropdown-toggle .dashicons {
+	font-size: 1.25rem;
+}
+
+.dropdown-toggle .dashicons:before {
+	content: '\f347';
+}
+
+.toggled-on > .dropdown-toggle .dashicons:before {
+	content: '\f343';
+}
+
+/* Hide Submenus by default using absolute positioning instead of display:none;. */
+.site-navigation .menu,
+.site-navigation .menu li,
+.site-navigation .menu ul,
+.site-navigation .menu li:hover > ul,
+.site-navigation .menu li:focus > ul {
+	position: absolute;
+	top: 100%;
+	left: -9999em;
+	/* color: #ff00ff; */
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+/* Display the menu when clicked on Menu Toggle */
+.toggled .menu {
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.toggled .menu li {
+	position: relative;
+	left: unset;
+}
+
+.toggled .menu li > .sub-menu {
+	display: none;
+}
+
+.toggled .menu .toggled-on > .sub-menu {
+	display: block;
+	position: relative;
+	left: 0;
+	top: 100%;
+}
+
+.site-navigation .menu ul a,
+.site-navigation .menu ul ul a {
+	padding: 1.25em 0.75em;
+}
+
+.site-navigation .menu ul a {
+	padding: 1.25em 1.25em;
+}
+
+.site-navigation .menu ul ul a {
+	padding: 1.25em 1.75em;
+}
+/* пункты меню в выпадающем списке деск топ версия */
+.site-navigation .menu ul a,
+.site-navigation .menu ul ul a {
+	background: linear-gradient(180deg, rgba(71,138,33,1), rgba(40,167,41,1));
+	text-decoration: none;
+}
+	
+/* Second and following tiers submenus */
+.site-navigation .menu ul li {
+}
+
+.menu .current_page_item > a,
+.menu .current_page_ancestor > a,
+.menu .current-menu-item > a,
+.menu .current-menu-ancestor > a { 
+	font-weight: 900;
+}
+
+.toggled .social-menu {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #ff7700;
+	
+}
+
+.toggled .social-menu li {
+	width: 2.75em;
+	height: 2.75em;
+	border: 1px solid #bbb;
+	border-radius: 2px;
+	margin: 0.5em 0;
+}
+
+.toggled .social-menu a {
+	padding: 0.4em;
+	text-align: center;
+}
+
+.social-menu a .dashicons {
+	vertical-align: middle;
+}
+
+.social-menu a .dashicons:before {
+	content: "\f240";
+}
+
+.social-menu a[href*="twitter.com"] .dashicons:before {
+	content: "\f301";
+}
+
+.social-menu a[href*="facebook.com"] .dashicons:before {
+	content: "\f304";
+}
+
+.social-menu a[href*="instagram.com"] .dashicons:before {
+	content: "\f12d";
+}
+
+.social-menu a[href*="wordpress.org"] .dashicons:before,
+.social-menu a[href*="wordpress.com"] .dashicons:before {
+	content: "\f120";
+}
+
+/*--------------------------------------------------------------
+6. Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	/*border-radius: 2px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);*/
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 1rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+
+/* Mobile nav end */
+
+/* Navigation start */
+@media screen and (min-width: 769px) {
+
+  /*
+  5. Navigation
+    5.1 Links	
+  */
+  
+  /* 5.2 Menus */
+  
+  .menu-toggle,
+  .dropdown-toggle {
+    display: none;
+  }
+  
+  .site-navigation {
+    display: flex;
+    align-items: start;
+  }
+  
+  .site-navigation .primary-menu,
+  .site-navigation .social-menu {
+    display: flex;
+	justify-content: space-around;
+    position: static;
+    margin: auto;
+    padding:0px;
+  }
+  
+  .site-navigation .social-menu {
+    border-left: 1px solid #bbb;
+  }
+  
+  .site-navigation .menu li {
+    position: relative;
+    width: auto;
+    left: unset;
+    list-style:none;
+  }
+  
+  .site-navigation .menu ul li:first-child {
+    border-top: 0;
+  }
+  
+  .site-navigation .menu a,
+  .site-navigation .menu ul a,
+  .site-navigation .menu ul ul a {
+
+    padding: 0.75em 0.75em;
+	white-space: pre; /* Учитываются все пробелы и переносы */	
+	display: block;
+	color: #FFA200;
+	text-shadow: 2px 2px 4px #000000;
+	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #ffffff;
+	text-align: center;
+	position: relative;
+	font-family: Lasco, fantasy;
+	font-size: calc(10px + 16 *(100vw / 1280));
+	font-weight: 400;
+	font-style: normal;
+	margin: auto;
+  }
+  
+  /* Hide Dropdowns by Default
+   * and giving it a position of absolute */
+  .site-navigation .menu ul {
+    position: absolute; 
+    /* has to be the same number as the "line-height" of "nav a" */
+    top: 100%;
+    left: -9999em;
+    /*! border: 1px solid #606060; */
+  }
+    
+  /* Display Dropdowns on hover and focus */
+  .site-navigation .menu li:hover > ul,
+  .site-navigation .menu li:focus > ul,
+  .site-navigation .menu li.focus > ul {
+    left: 0;
+    z-index:2;
+    padding-left:0;
+  }
+    
+  /* First Tier Dropdown */
+  .site-navigation .menu ul li {
+    position: relative;
+    /*width: 170px;*/
+  }
+  
+  /* Second, Third and more Tiers	
+   * We move the 2nd and 3rd etc tier dropdowns to the left
+   * by the amount of the width of the first tier.
+  */
+  .site-navigation .menu li li:hover > ul,
+  .site-navigation .menu li li:focus > ul,
+  .site-navigation .menu li li.focus > ul {
+    top: 0;
+    left: 100%; 
+  }
+  /*ховер в выпад списке на десктоп*/
+  .site-navigation .menu ul a:hover,
+  .site-navigation .menu ul a:focus {
+    background-color: #1E531B;
+    color: #EF5925;
+    text-decoration: none;
+  }
+  
+  .menu-item-has-children > a:after,
+  .page_item_has_children > a:after {
+    font-family: dashicons;
+    content: '\f347';
+    vertical-align: bottom;
+    margin-left: 0.25em;
+  }
+  
+  .menu-item-has-children .menu-item-has-children > a:after,
+  .menu-item-has-children .page_item_has_children > a:after,
+  .page_item_has_children .menu-item-has-children > a:after,
+  .page_item_has_children .page_item_has_children > a:after {
+    content: '\f345';
+    font-family: dashicons;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+  
+/* Navigation end */
+
+
+/*
+ * menu elementor
+ * 
+ */
+
+.elementor-column-wrap {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.elementor-column-wrap .elementor-widget-wrap {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.elementor-column-wrap .elementor-widget-wrap .elementor-widget-sidebar {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.elementor-column-wrap .elementor-widget-wrap .elementor-widget-sidebar .elementor-widget-container {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.elementor-column-wrap .elementor-widget-wrap .elementor-widget-sidebar .elementor-widget-container .menu-school-menu-container {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.menu-school-menu-container,
+.menu-psiholog-menu-container {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.menu-school-menu-container ul,
+.menu-psiholog-menu-container ul {
+	display: block;
+	margin: auto;
+	text-align: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+.menu-school-menu-container ul li,
+.menu-psiholog-menu-container ul li{
+	display: block;
+	margin: auto;
+	text-align: center;
+	margin: 10px auto;
+	border: 5px solid #ccc;
+	background:linear-gradient(to left bottom, #99BB22, #3F4047);
+	
+}
+
+.menu-school-menu-container ul li a,
+.menu-psiholog-menu-container ul li a{
+	display: block;
+	margin: auto;
+	padding: 10px 0px;
+	text-align: center;
+	color: #fff;
+	font: bold 16pt serif;
+}
+}
+/*
+ * end menu elementor
+ * 
+ */
+
+.slider-box {
+	position: absolute;
+
+}
+
+.header-wrapper-box {
+	position: absolute;
+	top: 40px;
+	width: 100%;
+}
+
+.header_logo-wrapper a img{
+	width: 130px;
+	margin: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.site-description{
+	font-family: 'Pacifico', sans-serif;
+	font-size: 4vw;
+	color: #A9FF67;
+	text-align: center;
+	
+}
+
+/*___________my_____header________*/
+
+body{margin:0;padding:0;}
+
+@font-face{
+font-family: 'Lasco';
+src: url('http://smaragdove.ho.ua/wp-content/themes/stp-accessibility/font/Lasco.ttf') format('truetype');
+}
+
+h1 span:before {
+	content: '«';
+	font-size: calc(20px + 26 *(100vw / 1280));
+}
+
+h1 span:after {
+	content: '»';
+	font-size: calc(20px + 26 *(100vw / 1280));
+}
+
+.site-title{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.h1Text h1{
+	display: block;
+	color: #FFA200;
+	 text-shadow: 2px 2px 4px #000000;
+	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #ffffff;
+	text-align: center;
+	position: relative;
+	font-family: Lasco, fantasy;
+	font-size: calc(20px + 16 *(100vw / 1280));
+	font-weight: 400;
+	font-style: normal;
+	margin: auto;
+}
+
+.h1Text{
+	position: absolute;
+	width: 100%;
+	z-index: 50;
+}
+
+.site-title a{
+
+	color: #FFA200;
+	 text-shadow: 2px 2px 4px #000000;
+	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #ffffff;
+	text-align: center;
+	position: relative;
+	font-family: Lasco, fantasy;
+	font-size: calc(20px + 16 *(100vw / 1280));
+	font-weight: 400;
+	font-style: normal;
+	margin: auto;
+}
+
+.h1Text{
+	position: absolute;
+	width: 100%;
+	z-index: 50;
+}
+
+.site-title{
+	position: absolute;
+	width: 100%;
+	z-index: 50;
+}
+
+.headerWrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.bgWrapper{
+	position: relative;
+	max-height: 300px;
+	max-width: 100%;
+	width: 100%;
+	background:#00B68E;
+}
+
+.bgWrapper div{
+	position: absolute;
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+.layer-1{
+	background-position: bottom center;
+	background-size: auto 100%;
+}/*sun*/
+
+.layer-2{
+	background-position: 0 0;
+	background-size: auto 100%;
+}/*yellowRoad*/
+
+.layer-3{
+	background-position: bottom right;
+	background-size: auto 100%;
+}/*hillsForestsMills*/
+
+.layer-4{
+	background-position: bottom center ;
+	background-size: auto 85%;
+}/*centerHills*/
+
+.layer-5{
+	background-position: center right;
+	background-size: auto 100%;
+}/*spruce*/
+
+.layer-6{
+	background-position: 0 0;
+	background-size: cover;
+}/*spruce*/
+
+.layer-7{
+	width: 70%!important; 
+	height: 70%!important; 
+	margin: 20px 0 0 20px; 
+	background-size: auto 100%!important;
+}
+
+.layer-8{
+	background-position: bottom right;
+	background-size: 30% auto;
+}/*children*/
+
+@media (min-width: 1260px) {
+	.site-title a{
+		margin-top: calc(24px + 16 *(100vw / 1280));
+		font-size: calc(44px + 16 *(100vw / 1280));
+	}
+	
+	.h1Text h1{
+		margin-top: calc(24px + 16 *(100vw / 1280));
+		font-size: calc(44px + 16 *(100vw / 1280));
+	}
+}
+@media (max-width: 1260px) {
+	.site-title{
+		/*height: 50%!important;*/
+	}
+	.h1Text{
+		/*height: 50%!important;*/
+	}
+	h1 br{
+		display:none;
+	}
+	
+	.layer-8{
+		background-position: bottom center;
+		background-size: 40% auto;
+	}/*children*/
+	
+	.layer-9{
+		background-position: bottom center;
+		background-size: 40% auto;
+	}/*1_kid*/
+	
+	.site-title{
+		position: relative!important;
+		/*margin-top: calc(20px + 16 *(80vw / 100));*/
+		background-color:#00B68E;
+	}
+	
+	.h1Text{
+		position: relative!important;
+		/*margin-top: calc(20px + 16 *(80vw / 100));*/
+		background-color:#00B68E;
+	}
+	
+	.bgWrapper{
+		max-height: 200px;
+	}
+	h1 a{
+		font-size: calc(24px + 16 * ((100vw - 320) / 1080));
+	}
+	h1{
+		font-size: calc(24px + 16 * ((100vw - 320) / 1080));
+	}
+	h1 span:before{
+		font-size: calc(24px + 12 * ((100vw - 320) / 1080));
+	}
+	h1 span:after{
+		font-size: calc(24px + 12 * ((100vw - 320) / 1080));
+	}
+	
+}
+
+@media (min-width: 1800px) {
+	.layer-9{
+		background-position: bottom right ;
+		background-size: 30% auto;
+	}
+	/*1_kid*/
+}
+@media (max-width: 1930px) {
+	.bgWrapper{
+		max-height: 300px;
+	}
+}
+
+@media (max-width: 450px) {
+	h1 br{
+		display:block;
+	}
+}
+
+.bgWrapper:after{
+  content: "";
+  display: block;
+  padding-top: 15%;
+}
+ 
+/*
+nav {
+	display: block;
+	position: relative;
+	height: 50px;
+	width: 100%;
+	background-image: url("img/spruceMenu.png");
+	background-repeat: no-repeat;
+	background-size: 97% auto;
+	border-top: 2px solid black;
+	border-bottom: 1px solid black;
+}
+
+.menu {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: rgb(150,188,37);
+	background: linear-gradient(350deg, rgba(150,188,37,0.9) 27%, rgba(0,181,129,0.95) 100%);
+}
+
+.spruceFrame {
+	display: block;
+	position: relative;
+	height: 520px;
+	width: 100%;
+	background:#00B68E;
+	background-image: url("img/spruceFrame.png");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+*/
+.rpwe-ul{
+	list-style-type:none;
+	padding: 0!important;
+}
+
+.page-title, .footer-copyright, .rpwe-ul li{
+	text-align: center;
+	border: 1px solid #ccc;
+	margin: 5px;
+	padding: 0 10px;
+	background: #fff;
+}
+
+.page-title{
+	color: #94A4A6;
+	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #444444;
+	font-size: 30px;
+}
+
+.rpwe-block h3 {
+	margin: 0;
+}
+
+.rpwe-block h3 a{
+	color: #94A4A6;
+	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #444444;
+	font-size: 23px;
+	text-decoration: none;
+}
+
+.rpwe-li:hover{
+	background: #E1E1E1;
+}
+
+.rpwe-li:hover h3 a{
+	color: #444444;
+	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #444444;
+}
+
+.rpwe-li:hover .rpwe-time{
+	color: #fff;
+}
+
+.rpwe-time {
+	display: block;
+	color: #ccc;
+	font-size: 16px;
+	padding: 5px;
+}
+
+.content {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+
+
+.content h2 a{
+	color: red;
+	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #444444;
+}
+/*radost_sttyle*/
+
+.conceptionWrapper {
+	background: #00b487;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-gap: 4vw;
+	grid-auto-rows: minmax(auto, auto);
+	padding: 50px;
+}
+
+.conceptionWrapper > div{
+	grid-gap: 4vw;
+}
+
+.conceptionH2 {
+	border: 2px solid #fff;
+	border-radius: 20px;
+	padding: 20px;
+	background: #248381;
+}
+
+.conceptionItems {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(auto, auto);
+}
+
+.conceptionH2 > h2{
+	margin: 0px;
+	text-align: center;
+	color: #ffa200;
+	font-size: calc(20px + 10 *(100vw / 1280));
+	font-family: Lasco, fantasy;
+  	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #fff;
+}
+
+.parAndImageItem{
+	position: relative;
+	display: grid;
+	height: 80px;
+	margin: 0px;
+	background: #248381;
+	border: 2px solid #fff;
+	border-radius: 40px/50%;
+}
+/*
+.parAndImageItem > p:nth-child(2n-1) {
+	justify-self: end;
+	color: #cc11ff;
+}
+.parAndImageItem > p:nth-child(2n) {
+	justify-self: start;
+}
+*/
+.parAndImageItem img:nth-child(2n-1) {
+	justify-self: start;
+}
+.parAndImageItem img:nth-child(2n) {
+	justify-self: end;
+}
+
+.parAndImageItem > p{
+	margin:0 30px;
+	color: #ffa200;
+	/*font-size: calc(14px + 10 *(100vw / 1280));*/
+	font-size: 30px;
+	font-family: Pacifico, fantasy;
+  	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #fff;
+	align-self: center;
+	text-align: center;
+}
+
+.radostImage {
+	width: 100px;
+	position: absolute;
+	margin: 0 -5px;
+	padding: 0;
+	text-align: center;
+    align-self: center;
+}
+/*_____________*/
+
+.fon_gradient{
+	background: linear-gradient(350deg, rgba(25,7,131,0.7) 27%, rgba(107,19,132,0.7) 100%);
+	padding: 500px;
+}
+.rozklad ul{
+	list-style-type: none;
+}
+.rozklad li, .rozklad p, .rozklad h2{
+	color: #ffa200;
+	font-size: calc(16px + 10 *(100vw / 1280));
+  	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #fff;
+}
+
+.rozklad li{
+	font-family: Lasco, normal;
+}
+.rozklad p, .rozklad h2{
+	font-family: Lasco, normal;
+}
+
+/*
+.content {
+	background: url('img/home/school/shkola_izumrud.jpg'), #1ef1a3;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+*/
+/*sitebar*/
+
+/*.col, .widget-area {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 4fr 1fr;
+	grid-auto-rows: minmax(auto, auto);
+	grid-gap: 2vw;
+}
+*/
