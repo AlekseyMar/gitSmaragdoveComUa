@@ -29,6 +29,9 @@ function stp_accessibility_register_css(){
 	wp_enqueue_script( 'stp_accessibility_accessible-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20190715', true );
 	wp_enqueue_style('stp_accessibility_pitemplate-style', get_template_directory_uri().'/style.css');
 
+    wp_register_style( 'grid-template-style', get_template_directory_uri(). '/css/grid-template-style.css', array('stp_accessibility_pitemplate-style'), '', 'screen');
+    wp_enqueue_style( 'grid-template-style');
+
 	wp_localize_script( 'stp_accessibility_accessible-navigation', 'accessibleNavigationScreenReaderText', array(
 		'expandMain'   => __( 'Open the main menu',  'stp-accessibility' ),
 		'collapseMain' => __( 'Close the main menu',  'stp-accessibility' ),
@@ -39,6 +42,7 @@ function stp_accessibility_register_css(){
 	
 	if ( is_singular() ) wp_enqueue_script( "comment-reply" ); 
 }
+//add_action('wp_print_styles', 'stp_accessibility_register_css');
 add_action('wp_enqueue_scripts', 'stp_accessibility_register_css');
 
 /* Registering Menu */
@@ -46,6 +50,9 @@ function stp_accessibility_register_my_menu() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'stp-accessibility' ),
 	) );
+    register_nav_menus( array(
+        'school' => __( 'School Navigation', 'stp-accessibility' ),
+    ) );
 }
 add_action( 'init', 'stp_accessibility_register_my_menu' );
 
@@ -64,25 +71,18 @@ if (function_exists('register_sidebar')) {
         'after_title'   => '</h2>' ,
     ));
 
-    register_sidebar(array(  
-        'name' => __('Footer #1','stp-accessibility'),  
-        'id'   => 'footer1',  
-        'description'   => __('Footer widget 1','stp-accessibility'),  
-        'before_widget' => '<aside role="complementary" id="%1$s" class="widget-content footer-widget" aria-label="[title]">',  
-        'after_widget'  => '</aside>',  
-        'before_title'  => '<h2 class="widget-title footer-widget-title">',  
-        'after_title'   => '</h2>' ,
-	));
-	
-	register_sidebar(array(  
-        'name' => __('Footer #2','stp-accessibility'),  
-        'id'   => 'footer2',  
-        'description'   => __('Footer widget 2','stp-accessibility'),  
-        'before_widget' => '<aside role="complementary" id="%1$s" class="widget-content footer-widget" aria-label="[title]">',  
-        'after_widget'  => '</aside>',  
-        'before_title'  => '<h2 class="widget-title footer-widget-title">',  
-        'after_title'   => '</h2>' ,
-    ));
+    /* В боковой колонке - правый сайдбар */
+    register_sidebar(
+        array(
+            'id' => 'right_side', // уникальный id
+            'name' => __('правая боковая колонка','stp-accessibility'), // название сайдбара
+            'description' => 'Перетащите сюда виджеты, чтобы добавить их в сайдбар.', // описание
+            'before_widget' => '<div id="%1$s" class="side widget %2$s">', // по умолчанию виджеты выводятся <li>-списком
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">', // по умолчанию заголовки виджетов в <h2>
+            'after_title' => '</h3>'
+        )
+    );
 }
 }
 
