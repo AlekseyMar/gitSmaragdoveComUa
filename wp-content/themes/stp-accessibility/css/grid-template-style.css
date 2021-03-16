@@ -1,9 +1,0 @@
-.grid-center-block-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 280px;
-    background: #02ab6c;
-}
-
-.grid-center-block-element{
-
-}

@@ -1,0 +1,2 @@
+[12-Feb-2021 12:33:00 UTC] PHP Warning:  array_intersect_key(): Expected parameter 1 to be an array, string given in /home/smaragdo/public_html/wp-includes/rest-api/class-wp-rest-server.php on line 1402
+[03-Mar-2021 06:06:25 UTC] PHP Warning:  array_intersect_key(): Expected parameter 1 to be an array, string given in /home/smaragdo/public_html/wp-includes/rest-api/class-wp-rest-server.php on line 1402

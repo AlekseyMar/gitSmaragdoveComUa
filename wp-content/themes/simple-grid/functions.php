@@ -160,3 +160,4 @@ require_once( trailingslashit( get_template_directory() ) . 'inc/functions/actio
 require_once( trailingslashit( get_template_directory() ) . 'inc/functions/media-functions.php' );
 require_once( trailingslashit( get_template_directory() ) . 'inc/functions/enqueue-scripts.php' );
 require_once( trailingslashit( get_template_directory() ) . 'inc/admin/custom.php' );
+require_once( trailingslashit( get_template_directory() ) . 'inc/functions/my-redux-options-panel.php' );

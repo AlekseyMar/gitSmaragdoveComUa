@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-One package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-25 15:39:48+0000\n"
+"PO-Revision-Date: 2020-12-26 09:37:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -237,6 +237,16 @@ msgctxt "Theme starter content"
 msgid "Need help?"
 msgstr "Потрібна допомога?"
 
+#: inc/starter-content.php:97
+msgctxt "Theme starter content"
+msgid "Twenty Twenty-One also includes an overlap style for column blocks. With a Columns block selected, open the \"Styles\" panel within the Editor sidebar. Choose the \"Overlap\" block style to try it out."
+msgstr "Twenty Twenty-One також включає в себе стиль накладання блоків колонок. Вибравши блок \"Колонки\", відкрийте панель \"Стилі\" всередині бічної колонки редактора. Оберіть стиль блоків \"Накладання\" щоби його випробувати."
+
+#: inc/starter-content.php:93
+msgctxt "Theme starter content"
+msgid "Overlap columns"
+msgstr "Накладати колонки"
+
 #: inc/starter-content.php:87
 msgctxt "Theme starter content"
 msgid "Twenty Twenty-One includes stylish borders for your content. With an Image block selected, open the \"Styles\" panel within the Editor sidebar. Select the \"Frame\" block style to activate it."
@@ -442,7 +452,7 @@ msgstr "Межі"
 
 #: inc/block-styles.php:26
 msgid "Overlap"
-msgstr "Перекриття"
+msgstr "Накладання"
 
 #: inc/block-patterns.php:116
 msgctxt "Block pattern description"
@@ -462,6 +472,15 @@ msgstr "Список проектів із зображеннями мініат
 msgid "Portfolio list"
 msgstr "Список портфоліо"
 
+#: inc/block-patterns.php:95
+msgctxt "Block pattern description"
+msgid "An overlapping columns block with two images and a text description."
+msgstr "Накладений блок колонок із двома зображеннями та текстовим описом."
+
+#: inc/block-patterns.php:92
+msgid "Overlapping images and text"
+msgstr "Накладання зображень і тексту"
+
 #: inc/block-patterns.php:83
 msgctxt "Block pattern description"
 msgid "A media & text block with a big image on the left and a smaller one with bordered frame on the right."
@@ -470,6 +489,15 @@ msgstr "Блок \"медіа і текст\" з великим зображен
 #: inc/block-patterns.php:80
 msgid "Two images showcase"
 msgstr "Приклад двох зображень"
+
+#: inc/block-patterns.php:71
+msgctxt "Block pattern description"
+msgid "Three images inside an overlapping columns block."
+msgstr "Три зображення всередині накладеного блоку колонок."
+
+#: inc/block-patterns.php:68
+msgid "Overlapping images"
+msgstr "Накладання зображень"
 
 #: inc/block-patterns.php:59
 msgctxt "Block pattern description"

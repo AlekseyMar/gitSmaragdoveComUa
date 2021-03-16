@@ -1052,7 +1052,7 @@ body.admin-bar .simple-grid-site-header.simple-grid-fixed{top:32px;}
 }
 
 .simple-grid-site-description, .simple-grid-site-title a{
-    font-family: 'Lasco', sans-serif;
+    font-family: 'Lasco';
     text-align: center;
     text-shadow: 2px 2px 4px #000000;
     -webkit-text-stroke-width: 1px;
@@ -1100,7 +1100,7 @@ h1 span:after {
     -webkit-text-stroke-color: #ffffff;
     text-align: center;
     position: relative;
-    font-family: Lasco, fantasy;
+    font-family: Lasco;
     font-size: calc(20px + 16 *(100vw / 1280));
     font-weight: 400;
     font-style: normal;
@@ -1359,4 +1359,197 @@ h1 span:after {
 {
     background: rgb(33,143,74);
     color: #fa5902;
+}
+
+
+/*radost_sttyle*/
+
+.conceptionWrapper {
+	background: #00b487;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-gap: 4vw;
+	grid-auto-rows: minmax(auto, auto);
+	padding: 50px;
+}
+
+.conceptionWrapper > div{
+	grid-gap: 4vw;
+}
+
+.conceptionH2 {
+	border: 2px solid #fff;
+	border-radius: 20px;
+	padding: 20px;
+	background: #248381;
+}
+
+.conceptionItems {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(auto, auto);
+}
+
+.conceptionH2 > h2{
+	margin: 0px;
+	text-align: center;
+	color: #ffa200;
+	font-size: calc(20px + 10 *(100vw / 1280));
+	font-family: Lasco, fantasy;
+  	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #fff;
+}
+
+.parAndImageItem{
+	position: relative;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: auto auto;
+	grid-auto-rows: minmax(auto, auto);
+	height: 80px;
+	margin: 0px;
+	background: #248381;
+	border: 2px solid #fff;
+	border-radius: 40px/50%;
+}
+/*
+.parAndImageItem > p:nth-child(2n-1) {
+	justify-self: end;
+	color: #cc11ff;
+}
+
+*/
+
+.parAndImageItem > div > p{
+	display: block;
+	margin:0;
+	color: #ffa200;
+	font-size: calc(14px + 10 *(100vw / 1280));
+	/*font-size: 30px;*/
+	font-family: Pacifico, fantasy;
+  	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #fff;
+	align-self: center;
+	text-align: center;
+}
+.parAndImageItem > div{
+	margin-right: 2%;
+	justify-self: end;
+	align-self: center;
+}
+.parAndImageItem > div:nth-child(2n){
+	width: 70px;
+}
+.radostImage {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+    align-self: center;
+}
+
+@media screen and (orientation: portrait) {
+	.conceptionItems {
+		padding-bottom: 5%;
+	}
+	.entry-content div > p:last-child {
+		margin-bottom: auto;
+	}
+	.parAndImageItem > div > p{
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: auto auto;
+		grid-auto-rows: minmax(auto, auto);
+		display: block;
+		margin: auto;
+		font-size: calc(14px + 16 *(100vw / 1280));
+		align-self: center;
+		text-align: center;
+	}
+	.parAndImageItem > div{
+		justify-self: end;
+		margin-right: 2%;
+	}
+	.conceptionWrapper {
+		padding: 0;
+	}
+	.conceptionH2 {
+		border-radius: 0 0 20px 20px;
+		padding: 20px 2%;
+	}
+	.conceptionItems {
+		grid-template-columns: 1fr;
+	}
+	.radostImage {
+		width: 70px;
+		margin: 0px;
+		padding: 0;
+		text-align: center;
+		align-self: center;
+	}
+
+}
+
+
+/*_____________*/
+
+.fon_gradient{
+	background: linear-gradient(350deg, rgba(25,7,131,0.7) 27%, rgba(107,19,132,0.7) 100%);
+	padding: 100px 50px;
+}
+.rozklad ul{
+	list-style-type: none;
+}
+.rozklad li, .rozklad p, .rozklad h2{
+	color: #ffa200;
+	font-size: calc(16px + 10 *(100vw / 1280));
+  	-webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #fff;
+}
+
+.rozklad li{
+	font-family: Lasco, normal;
+}
+.rozklad p, .rozklad h2{
+	font-family: Lasco, normal;
+}
+
+.simple-grid-layout-c-s1 .simple-grid-main-wrapper {
+	width: 100%;
+	max-width: 100%;
+	-webkit-flex: 0 0 100%;
+	flex: 0 0 100%;
+}
+
+
+element.style {
+    padding-top: 0px;
+    padding-bottom: 1px;
+    position: relative;
+    transform: none;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.wp-block-group p strong {
+	text-align: justify;
 }
